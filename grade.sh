@@ -52,6 +52,6 @@ java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > out.txt 2>&1
 if grep -Fq "OK" out.txt
 then
     echo "You passed!"
-    else echo "Failures, try again!"
+    else echo "$(cat out.txt)"
         exit 3
 fi
